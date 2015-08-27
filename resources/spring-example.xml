@@ -7,7 +7,7 @@
             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="helloWorldBean" class="ua.burdyga._2_spring.beans.HelloWorld">
-        <property name="name" value="VTC"/>
+        <property name="name" value="Dima"/>
     </bean>
 
 </beans>
