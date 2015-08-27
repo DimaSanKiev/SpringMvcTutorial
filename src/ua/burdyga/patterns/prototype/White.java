@@ -3,7 +3,7 @@ package ua.burdyga.patterns.prototype;
 public class White extends Color {
 
     public White() {
-        type = "white";
+        setType("White");
     }
 
     @Override

@@ -4,9 +4,6 @@ public abstract class Color implements Cloneable {
     private String id;
     private String type;
 
-    public Color() {
-    }
-
     abstract void paint();
 
     public String getId() {

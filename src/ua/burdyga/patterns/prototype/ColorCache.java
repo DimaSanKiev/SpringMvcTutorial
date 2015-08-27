@@ -16,11 +16,11 @@ public class ColorCache {
         colorMap.put(red.getId(), red);
 
         Blue blue = new Blue();
-        blue.setId("1");
+        blue.setId("2");
         colorMap.put(blue.getId(), blue);
 
         White white = new White();
-        white.setId("1");
+        white.setId("3");
         colorMap.put(white.getId(), white);
     }
 }
