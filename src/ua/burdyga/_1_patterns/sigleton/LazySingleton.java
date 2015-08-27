@@ -1,4 +1,4 @@
-package ua.burdyga.patterns.sigleton;
+package ua.burdyga._1_patterns.sigleton;
 
 public class LazySingleton {
 

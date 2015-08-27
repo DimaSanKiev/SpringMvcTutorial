@@ -1,4 +1,4 @@
-package ua.burdyga.patterns.prototype;
+package ua.burdyga._1_patterns.prototype;
 
 import java.util.Hashtable;
 

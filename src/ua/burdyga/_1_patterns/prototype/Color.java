@@ -1,4 +1,4 @@
-package ua.burdyga.patterns.prototype;
+package ua.burdyga._1_patterns.prototype;
 
 public abstract class Color implements Cloneable {
     private String id;
