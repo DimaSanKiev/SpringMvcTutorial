@@ -1,7 +1,7 @@
 package ua.burdyga._2_spring.beans;
 
 public class CarBean {
-    public String make;
+    private String make;
 
     public String getMake() {
         return make;
