@@ -1,4 +1,3 @@
 .idea
 SpringMvcTutorial.iml
-out
-lib
+target
