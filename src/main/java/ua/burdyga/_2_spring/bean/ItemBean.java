@@ -1,4 +1,4 @@
-package ua.burdyga._2_spring.beans;
+package ua.burdyga._2_spring.bean;
 
 public class ItemBean {
 

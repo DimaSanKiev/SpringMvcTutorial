@@ -4,15 +4,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="helloWorldBean" class="ua.burdyga._2_spring.beans.HelloWorld">
+    <bean id="helloWorldBean" class="ua.burdyga._2_spring.bean.HelloWorld">
         <property name="name" value="Dima"/>
     </bean>
 
-    <bean id="customParserBean" class="ua.burdyga._2_spring.beans.CustomParserBean" scope="singleton">
+    <bean id="customParserBean" class="ua.burdyga._2_spring.bean.CustomParserBean" scope="singleton">
         <property name="message" value="message set in xml config for bean"/>
     </bean>
 
-    <bean id="uiWidgetBean" class="ua.burdyga._2_spring.beans.UIWidgetBean" scope="prototype">
+    <bean id="uiWidgetBean" class="ua.burdyga._2_spring.bean.UIWidgetBean" scope="prototype">
         <property name="message" value="message set in xml config for bean"/>
     </bean>
 

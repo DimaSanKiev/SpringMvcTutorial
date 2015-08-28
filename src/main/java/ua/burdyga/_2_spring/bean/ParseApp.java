@@ -1,4 +1,4 @@
-package ua.burdyga._2_spring.beans;
+package ua.burdyga._2_spring.bean;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;

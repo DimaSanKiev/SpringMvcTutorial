@@ -1,4 +1,4 @@
-package ua.burdyga._2_spring.beans;
+package ua.burdyga._2_spring.bean;
 
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
