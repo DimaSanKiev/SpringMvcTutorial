@@ -16,4 +16,20 @@
         <property name="message" value="message set in xml config for bean"/>
     </bean>
 
+    <bean id="computerBean" class="ua.burdyga._2_spring.bean.constructor_di.ComputerBean">
+        <constructor-arg ref="hardDriveBean"/>
+    </bean>
+
+    <bean id="computerBean2" class="ua.burdyga._2_spring.bean.constructor_di.ComputerBean">
+        <constructor-arg ref="hardDriveBean"/>
+        <constructor-arg ref="graphicsCardBean"/>
+        <constructor-arg ref="cpuBean"/>
+    </bean>
+
+    <bean id="hardDriveBean" class="ua.burdyga._2_spring.bean.constructor_di.HardDriveBean" scope="prototype"/>
+
+    <bean id="graphicsCardBean" class="ua.burdyga._2_spring.bean.constructor_di.GraphicsCardBean" scope="singleton"/>
+
+    <bean id="cpuBean" class="ua.burdyga._2_spring.bean.constructor_di.CpuBean" scope="singleton"/>
+
 </beans>

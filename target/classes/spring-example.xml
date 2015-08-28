@@ -4,16 +4,32 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="helloWorldBean" class="ua.burdyga._2_spring.beans.HelloWorld">
+    <bean id="helloWorldBean" class="ua.burdyga._2_spring.bean.HelloWorld">
         <property name="name" value="Dima"/>
     </bean>
 
-    <bean id="customParserBean" class="ua.burdyga._2_spring.beans.CustomParserBean" scope="singleton">
+    <bean id="customParserBean" class="ua.burdyga._2_spring.bean.CustomParserBean" scope="singleton">
         <property name="message" value="message set in xml config for bean"/>
     </bean>
 
-    <bean id="uiWidgetBean" class="ua.burdyga._2_spring.beans.UIWidgetBean" scope="prototype">
+    <bean id="uiWidgetBean" class="ua.burdyga._2_spring.bean.UIWidgetBean" scope="prototype">
         <property name="message" value="message set in xml config for bean"/>
     </bean>
+
+    <bean id="computerBean" class="ua.burdyga._2_spring.bean.constructor_di.ComputerBean">
+        <constructor-arg ref="hardDriveBean"/>
+    </bean>
+
+    <bean id="computerBean2" class="ua.burdyga._2_spring.bean.constructor_di.ComputerBean">
+        <constructor-arg ref="hardDriveBean"/>
+        <constructor-arg ref="graphicsCardBean"/>
+        <constructor-arg ref="cpuBean"/>
+    </bean>
+
+    <bean id="hardDriveBean" class="ua.burdyga._2_spring.bean.constructor_di.HardDriveBean" scope="prototype"/>
+
+    <bean id="graphicsCardBean" class="ua.burdyga._2_spring.bean.constructor_di.GraphicsCardBean" scope="singleton"/>
+
+    <bean id="cpuBean" class="ua.burdyga._2_spring.bean.constructor_di.CpuBean" scope="singleton"/>
 
 </beans>
