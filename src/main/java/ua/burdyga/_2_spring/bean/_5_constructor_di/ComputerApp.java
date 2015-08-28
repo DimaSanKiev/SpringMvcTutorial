@@ -1,4 +1,4 @@
-package ua.burdyga._2_spring.bean.constructor_di;
+package ua.burdyga._2_spring.bean._5_constructor_di;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;

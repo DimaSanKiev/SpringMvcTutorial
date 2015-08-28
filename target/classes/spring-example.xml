@@ -4,7 +4,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="helloWorldBean" class="ua.burdyga._2_spring.bean.HelloWorld">
+    <bean id="helloWorldBean" class="ua.burdyga._2_spring.bean._1_core.HelloWorld">
         <property name="name" value="Dima"/>
     </bean>
 

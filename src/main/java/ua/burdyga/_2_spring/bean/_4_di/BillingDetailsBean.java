@@ -1,4 +1,4 @@
-package ua.burdyga._2_spring.bean;
+package ua.burdyga._2_spring.bean._4_di;
 
 public class BillingDetailsBean {
     private String accountNumber;

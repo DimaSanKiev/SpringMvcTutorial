@@ -1,4 +1,4 @@
-package ua.burdyga._2_spring.bean.constructor_di;
+package ua.burdyga._2_spring.bean._5_constructor_di;
 
 public class CpuBean {
     private String manufacturer;

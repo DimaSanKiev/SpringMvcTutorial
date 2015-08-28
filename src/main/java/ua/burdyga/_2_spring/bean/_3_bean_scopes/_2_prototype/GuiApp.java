@@ -1,7 +1,8 @@
-package ua.burdyga._2_spring.bean;
+package ua.burdyga._2_spring.bean._3_bean_scopes._2_prototype;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
+import ua.burdyga._2_spring.bean._3_bean_scopes._2_prototype.UIWidgetBean;
 
 public class GuiApp {
 

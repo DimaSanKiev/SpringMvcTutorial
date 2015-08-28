@@ -1,4 +1,4 @@
-package ua.burdyga._2_spring.bean;
+package ua.burdyga._2_spring.bean._1_core;
 
 public class HelloWorld {
     private String name;

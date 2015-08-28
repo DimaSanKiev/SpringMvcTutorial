@@ -1,4 +1,4 @@
-package ua.burdyga._2_spring.bean;
+package ua.burdyga._2_spring.bean._3_bean_scopes._1_singleton;
 
 import java.util.concurrent.TimeUnit;
 
