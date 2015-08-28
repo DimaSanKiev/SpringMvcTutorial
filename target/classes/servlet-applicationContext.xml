@@ -9,4 +9,10 @@
         <property name="price" value="0"/>
     </bean>
 
+    <!-- A bean definition with initialization method -->
+    <bean id="fooWithInitMethod" class="ua.burdyga._2_spring.beans.FooBean" init-method="myInitMethod"/>
+
+    <!-- A bean definition with destruction method -->
+    <bean id="fooWithDestroyMethod" class="ua.burdyga._2_spring.beans.FooBean" destroy-method="myDestroyMethod"/>
+
 </beans>
