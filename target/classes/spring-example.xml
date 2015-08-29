@@ -1,35 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="helloWorldBean" class="ua.burdyga._2_spring.bean._1_core.HelloWorld">
         <property name="name" value="Dima"/>
     </bean>
 
-    <bean id="customParserBean" class="ua.burdyga._2_spring.bean.CustomParserBean" scope="singleton">
+    <bean id="customParserBean" class="ua.burdyga._2_spring.bean._3_bean_scopes._1_singleton.CustomParserBean" scope="singleton">
         <property name="message" value="message set in xml config for bean"/>
     </bean>
 
-    <bean id="uiWidgetBean" class="ua.burdyga._2_spring.bean.UIWidgetBean" scope="prototype">
+    <bean id="uiWidgetBean" class="ua.burdyga._2_spring.bean._3_bean_scopes._2_prototype.UIWidgetBean" scope="prototype">
         <property name="message" value="message set in xml config for bean"/>
     </bean>
 
-    <bean id="computerBean" class="ua.burdyga._2_spring.bean.constructor_di.ComputerBean">
+    <!-- Spring Constructor-Based DI -->
+    <bean id="computerBean" class="ua.burdyga._2_spring.bean._4_di._1_constructor_di.ComputerBean">
         <constructor-arg ref="hardDriveBean"/>
     </bean>
 
-    <bean id="computerBean2" class="ua.burdyga._2_spring.bean.constructor_di.ComputerBean">
+    <bean id="computerBean2" class="ua.burdyga._2_spring.bean._4_di._1_constructor_di.ComputerBean">
         <constructor-arg ref="hardDriveBean"/>
         <constructor-arg ref="graphicsCardBean"/>
         <constructor-arg ref="cpuBean"/>
     </bean>
 
-    <bean id="hardDriveBean" class="ua.burdyga._2_spring.bean.constructor_di.HardDriveBean" scope="prototype"/>
+    <bean id="hardDriveBean" class="ua.burdyga._2_spring.bean._4_di._1_constructor_di.HardDriveBean" scope="prototype"/>
 
-    <bean id="graphicsCardBean" class="ua.burdyga._2_spring.bean.constructor_di.GraphicsCardBean" scope="singleton"/>
+    <bean id="graphicsCardBean" class="ua.burdyga._2_spring.bean._4_di._1_constructor_di.GraphicsCardBean" scope="singleton"/>
 
-    <bean id="cpuBean" class="ua.burdyga._2_spring.bean.constructor_di.CpuBean" scope="singleton"/>
+    <bean id="cpuBean" class="ua.burdyga._2_spring.bean._4_di._1_constructor_di.CpuBean" scope="singleton"/>
+
+    <!-- Spring Setter-Based DI  -->
+    <bean id="shoppingCartBean" class="ua.burdyga._2_spring.bean._4_di._2_setter_di.ShoppingCartBean">
+        <property name="product" ref="productBean"/>
+    </bean>
+
+    <bean id="shoppingCartBean2" class="ua.burdyga._2_spring.bean._4_di._2_setter_di.ShoppingCartBean"
+        p:date="2015-01-01"
+        p:product-ref="productBean">
+    </bean>
+
+    <bean id="productBean" class="ua.burdyga._2_spring.bean._4_di._2_setter_di.ProductBean">
+        <property name="name" value="Cologne Versace"/>
+        <property name="description" value="Fragrance"/>
+        <property name="price" value="7"/>
+    </bean>
 
 </beans>

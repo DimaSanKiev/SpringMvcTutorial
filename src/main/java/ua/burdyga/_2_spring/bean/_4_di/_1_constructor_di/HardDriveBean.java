@@ -1,4 +1,4 @@
-package ua.burdyga._2_spring.bean._5_constructor_di;
+package ua.burdyga._2_spring.bean._4_di._1_constructor_di;
 
 public class HardDriveBean {
     private String manufacturer;
