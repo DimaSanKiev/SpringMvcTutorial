@@ -49,4 +49,29 @@
         <property name="price" value="7"/>
     </bean>
 
+    <!-- Spring Injecting Inner Beans -->
+    <bean id="airplaneBean" class="ua.burdyga._2_spring.bean._4_di._3_inner_beans.AirplaneBean">
+        <property name="manufacturer" value="Boeing"/>
+        <property name="wingSpan" value="50"/>
+        <property name="fuelCapacity" value="50000"/>
+        <property name="engine">
+            <bean id="engine" class="ua.burdyga._2_spring.bean._4_di._3_inner_beans.EngineBean">
+                <property name="manufacturer" value="Rolls-Royce"/>
+                <property name="horsePower" value="10000"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="airplaneBean2" class="ua.burdyga._2_spring.bean._4_di._3_inner_beans.AirplaneBean">
+        <property name="manufacturer" value="NASA"/>
+        <property name="wingSpan" value="50"/>
+        <property name="fuelCapacity" value="50000"/>
+        <property name="engine">
+            <bean class="ua.burdyga._2_spring.bean._4_di._3_inner_beans.EngineBean">
+                <property name="manufacturer" value="TrentXWB"/>
+                <property name="horsePower" value="10000"/>
+            </bean>
+        </property>
+    </bean>
+
 </beans>
