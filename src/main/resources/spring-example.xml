@@ -160,4 +160,27 @@
         <property name="name" value="First Order"/>
     </bean>
 
+    <!-- Spring Autowired Annotation -->
+    <bean id="bookBean" class="ua.burdyga._2_spring.bean._4_di._7_autowired_annotation.BookBean">
+        <property name="title" value="Harry Potter"/>
+        <property name="author" value="J. K. Rowling"/>
+        <property name="price" value="29.99"/>
+        <property name="isbn" value="1234"/>
+        <property name="edition" value="1st"/>
+    </bean>
+    <!-- definition for spellChecker bean -->
+    <bean id="publisherBean" class="ua.burdyga._2_spring.bean._4_di._7_autowired_annotation.PublisherBean">
+        <property name="name" value="Scholatic"/>
+        <property name="address" value="123 Street"/>
+        <property name="phoneNumber" value="987.789.3689"/>
+        <property name="genres">
+            <list>
+                <value>Sci-Fi</value>
+                <value>Children's Books</value>
+                <value>Non-Fiction</value>
+                <value>Self Help</value>
+            </list>
+        </property>
+    </bean>
+
 </beans>
