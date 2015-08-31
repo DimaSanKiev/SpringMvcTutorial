@@ -183,4 +183,10 @@
         </property>
     </bean>
 
+    <bean id="employeeBean" class="ua.burdyga._2_spring.bean._4_di._7_autowired_annotation.EmployeeBean">
+        <property name="id" value="1"/>
+        <!--<property name="name" value="Bob"/>-->
+        <!--<property name="phoneNumber" value="9874563578"/>-->
+    </bean>
+
 </beans>
