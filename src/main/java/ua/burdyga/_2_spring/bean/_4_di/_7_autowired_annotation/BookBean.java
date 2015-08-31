@@ -8,6 +8,7 @@ public class BookBean {
     private double price;
     private String isbn;
     private String edition;
+    @Autowired
     private PublisherBean publisher;
 
     public String getTitle() {
@@ -52,11 +53,6 @@ public class BookBean {
 
     public PublisherBean getPublisher() {
         return publisher;
-    }
-
-    @Autowired
-    public void setPublisher(PublisherBean publisher) {
-        this.publisher = publisher;
     }
 
     public void getPublisherInfo() {
