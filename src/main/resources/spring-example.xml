@@ -208,4 +208,8 @@
         <property name="type" value="air"/>
     </bean>
 
+    <!-- Spring JSR-250 Annotations -->
+    <bean id="jsrBean" class="ua.burdyga._2_spring.bean._4_di._9_jsr250_annotations.JsrBean" init-method="init"
+          destroy-method="destroy"/>
+
 </beans>
