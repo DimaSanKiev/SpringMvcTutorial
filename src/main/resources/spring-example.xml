@@ -189,4 +189,23 @@
         <!--<property name="phoneNumber" value="9874563578"/>-->
     </bean>
 
+    <!-- Spring Qualifier Annotation -->
+    <bean id="onlineCustomer" class="ua.burdyga._2_spring.bean._4_di._8_qualifier_annotation.OnlineCustomer">
+        <property name="id" value="1"/>
+        <property name="userName" value="Bob"/>
+        <property name="password" value="%Dfw#20E$"/>
+    </bean>
+
+    <bean id="travelTicketSea" class="ua.burdyga._2_spring.bean._4_di._8_qualifier_annotation.TravelTicket">
+        <property name="id" value="1"/>
+        <property name="description" value="By Sea"/>
+        <property name="type" value="sea"/>
+    </bean>
+
+    <bean id="travelTicketAir" class="ua.burdyga._2_spring.bean._4_di._8_qualifier_annotation.TravelTicket">
+        <property name="id" value="2"/>
+        <property name="description" value="By Air"/>
+        <property name="type" value="air"/>
+    </bean>
+
 </beans>
