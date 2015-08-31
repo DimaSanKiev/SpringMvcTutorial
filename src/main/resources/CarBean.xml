@@ -4,7 +4,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="carBean" class="ua.burdyga._2_spring.bean._2_container.CarBean">
+    <bean id="carBean" class="ua.burdyga._3_container.CarBean">
         <property name="Make" value="BMW"/>
     </bean>
 

@@ -7,73 +7,73 @@
 
     <context:annotation-config/>
 
-    <bean id="helloWorldBean" class="ua.burdyga._2_spring.bean._1_core.HelloWorld">
+    <bean id="helloWorldBean" class="ua.burdyga._2_core.HelloWorld">
         <property name="name" value="Dima"/>
     </bean>
 
-    <bean id="customParserBean" class="ua.burdyga._2_spring.bean._3_bean_scopes._1_singleton.CustomParserBean"
+    <bean id="customParserBean" class="ua.burdyga._4_bean_scopes._1_singleton.CustomParserBean"
           scope="singleton">
         <property name="message" value="message set in xml config for bean"/>
     </bean>
 
-    <bean id="uiWidgetBean" class="ua.burdyga._2_spring.bean._3_bean_scopes._2_prototype.UIWidgetBean"
+    <bean id="uiWidgetBean" class="ua.burdyga._4_bean_scopes._2_prototype.UIWidgetBean"
           scope="prototype">
         <property name="message" value="message set in xml config for bean"/>
     </bean>
 
     <!-- Spring Constructor-Based DI -->
-    <bean id="computerBean" class="ua.burdyga._2_spring.bean._4_di._1_constructor_di.ComputerBean">
+    <bean id="computerBean" class="ua.burdyga._5_di._1_constructor_di.ComputerBean">
         <constructor-arg ref="hardDriveBean"/>
     </bean>
 
-    <bean id="computerBean2" class="ua.burdyga._2_spring.bean._4_di._1_constructor_di.ComputerBean">
+    <bean id="computerBean2" class="ua.burdyga._5_di._1_constructor_di.ComputerBean">
         <constructor-arg ref="hardDriveBean"/>
         <constructor-arg ref="graphicsCardBean"/>
         <constructor-arg ref="cpuBean"/>
     </bean>
 
-    <bean id="hardDriveBean" class="ua.burdyga._2_spring.bean._4_di._1_constructor_di.HardDriveBean" scope="prototype"/>
+    <bean id="hardDriveBean" class="ua.burdyga._5_di._1_constructor_di.HardDriveBean" scope="prototype"/>
 
-    <bean id="graphicsCardBean" class="ua.burdyga._2_spring.bean._4_di._1_constructor_di.GraphicsCardBean"
+    <bean id="graphicsCardBean" class="ua.burdyga._5_di._1_constructor_di.GraphicsCardBean"
           scope="singleton"/>
 
-    <bean id="cpuBean" class="ua.burdyga._2_spring.bean._4_di._1_constructor_di.CpuBean" scope="singleton"/>
+    <bean id="cpuBean" class="ua.burdyga._5_di._1_constructor_di.CpuBean" scope="singleton"/>
 
     <!-- Spring Setter-Based DI  -->
-    <bean id="shoppingCartBean" class="ua.burdyga._2_spring.bean._4_di._2_setter_di.ShoppingCartBean">
+    <bean id="shoppingCartBean" class="ua.burdyga._5_di._2_setter_di.ShoppingCartBean">
         <property name="product" ref="productBean"/>
     </bean>
 
-    <bean id="shoppingCartBean2" class="ua.burdyga._2_spring.bean._4_di._2_setter_di.ShoppingCartBean"
+    <bean id="shoppingCartBean2" class="ua.burdyga._5_di._2_setter_di.ShoppingCartBean"
           p:date="2015-01-01"
           p:product-ref="productBean">
     </bean>
 
-    <bean id="productBean" class="ua.burdyga._2_spring.bean._4_di._2_setter_di.ProductBean">
+    <bean id="productBean" class="ua.burdyga._5_di._2_setter_di.ProductBean">
         <property name="name" value="Cologne Versace"/>
         <property name="description" value="Fragrance"/>
         <property name="price" value="7"/>
     </bean>
 
     <!-- Spring Injecting Inner Beans -->
-    <bean id="airplaneBean" class="ua.burdyga._2_spring.bean._4_di._3_inner_beans.AirplaneBean">
+    <bean id="airplaneBean" class="ua.burdyga._5_di._3_inner_beans.AirplaneBean">
         <property name="manufacturer" value="Boeing"/>
         <property name="wingSpan" value="50"/>
         <property name="fuelCapacity" value="50000"/>
         <property name="engine">
-            <bean id="engine" class="ua.burdyga._2_spring.bean._4_di._3_inner_beans.EngineBean">
+            <bean id="engine" class="ua.burdyga._5_di._3_inner_beans.EngineBean">
                 <property name="manufacturer" value="Rolls-Royce"/>
                 <property name="horsePower" value="10000"/>
             </bean>
         </property>
     </bean>
 
-    <bean id="airplaneBean2" class="ua.burdyga._2_spring.bean._4_di._3_inner_beans.AirplaneBean">
+    <bean id="airplaneBean2" class="ua.burdyga._5_di._3_inner_beans.AirplaneBean">
         <property name="manufacturer" value="NASA"/>
         <property name="wingSpan" value="50"/>
         <property name="fuelCapacity" value="50000"/>
         <property name="engine">
-            <bean class="ua.burdyga._2_spring.bean._4_di._3_inner_beans.EngineBean">
+            <bean class="ua.burdyga._5_di._3_inner_beans.EngineBean">
                 <property name="manufacturer" value="TrentXWB"/>
                 <property name="horsePower" value="10000"/>
             </bean>
@@ -81,7 +81,7 @@
     </bean>
 
     <!-- Spring Injecting Collection -->
-    <bean id="collectionExample" class="ua.burdyga._2_spring.bean._4_di._4_collections.CollectionExample">
+    <bean id="collectionExample" class="ua.burdyga._5_di._4_collections.CollectionExample">
         <property name="exampleList">
             <list>
                 <value>Credit Card</value>
@@ -119,49 +119,49 @@
         </property>
     </bean>
 
-    <bean id="collectionExample2" class="ua.burdyga._2_spring.bean._4_di._4_collections.CollectionExample2">
+    <bean id="collectionExample2" class="ua.burdyga._5_di._4_collections.CollectionExample2">
         <property name="usersList">
-            <list value-type="ua.burdyga._2_spring.bean._4_di.UserBean">
+            <list value-type="ua.burdyga._5_di.UserBean">
                 <ref bean="userBean"/>
                 <ref bean="userBean2"/>
             </list>
         </property>
     </bean>
 
-    <bean id="userBean" class="ua.burdyga._2_spring.bean._4_di.UserBean">
+    <bean id="userBean" class="ua.burdyga._5_di.UserBean">
         <property name="name" value="Bobby Flay"/>
     </bean>
 
-    <bean id="userBean2" class="ua.burdyga._2_spring.bean._4_di.UserBean">
+    <bean id="userBean2" class="ua.burdyga._5_di.UserBean">
         <property name="name" value="Sakai"/>
     </bean>
 
     <!-- Spring Beans Auto-Wiring -->
-    <bean id="homeAddress" class="ua.burdyga._2_spring.bean._4_di._5_auto_wiring.AddressBean">
+    <bean id="homeAddress" class="ua.burdyga._5_di._5_auto_wiring.AddressBean">
         <property name="streetName" value="123 Home Street"/>
         <property name="state" value="FL"/>
         <property name="city" value="Boca Raton"/>
         <property name="zip" value="87655"/>
     </bean>
 
-    <bean id="officeAddress" class="ua.burdyga._2_spring.bean._4_di._5_auto_wiring.AddressBean" primary="true">
+    <bean id="officeAddress" class="ua.burdyga._5_di._5_auto_wiring.AddressBean" primary="true">
         <property name="streetName" value="321 Office Street"/>
         <property name="state" value="CA"/>
         <property name="city" value="Los Angeles"/>
         <property name="zip" value="55555"/>
     </bean>
 
-    <bean id="studentBean" class="ua.burdyga._2_spring.bean._4_di._5_auto_wiring.StudentBean" autowire="byType">
+    <bean id="studentBean" class="ua.burdyga._5_di._5_auto_wiring.StudentBean" autowire="byType">
         <property name="name" value="Estudent"/>
     </bean>
 
     <!-- Spring Required Annotation -->
-    <bean id="orderBean" class="ua.burdyga._2_spring.bean._4_di._6_required_annotation.OrderBean">
+    <bean id="orderBean" class="ua.burdyga._5_di._6_required_annotation.OrderBean">
         <property name="name" value="First Order"/>
     </bean>
 
     <!-- Spring Autowired Annotation -->
-    <bean id="bookBean" class="ua.burdyga._2_spring.bean._4_di._7_autowired_annotation.BookBean">
+    <bean id="bookBean" class="ua.burdyga._5_di._7_autowired_annotation.BookBean">
         <property name="title" value="Harry Potter"/>
         <property name="author" value="J. K. Rowling"/>
         <property name="price" value="29.99"/>
@@ -169,7 +169,7 @@
         <property name="edition" value="1st"/>
     </bean>
     <!-- definition for spellChecker bean -->
-    <bean id="publisherBean" class="ua.burdyga._2_spring.bean._4_di._7_autowired_annotation.PublisherBean">
+    <bean id="publisherBean" class="ua.burdyga._5_di._7_autowired_annotation.PublisherBean">
         <property name="name" value="Scholatic"/>
         <property name="address" value="123 Street"/>
         <property name="phoneNumber" value="987.789.3689"/>
@@ -183,33 +183,33 @@
         </property>
     </bean>
 
-    <bean id="employeeBean" class="ua.burdyga._2_spring.bean._4_di._7_autowired_annotation.EmployeeBean">
+    <bean id="employeeBean" class="ua.burdyga._5_di._7_autowired_annotation.EmployeeBean">
         <property name="id" value="1"/>
         <property name="name" value="Bob"/>
         <!--<property name="phoneNumber" value="9874563578"/>-->
     </bean>
 
     <!-- Spring Qualifier Annotation -->
-    <bean id="onlineCustomer" class="ua.burdyga._2_spring.bean._4_di._8_qualifier_annotation.OnlineCustomer">
+    <bean id="onlineCustomer" class="ua.burdyga._5_di._8_qualifier_annotation.OnlineCustomer">
         <property name="id" value="1"/>
         <property name="userName" value="Bob"/>
         <property name="password" value="%Dfw#20E$"/>
     </bean>
 
-    <bean id="travelTicketSea" class="ua.burdyga._2_spring.bean._4_di._8_qualifier_annotation.TravelTicket">
+    <bean id="travelTicketSea" class="ua.burdyga._5_di._8_qualifier_annotation.TravelTicket">
         <property name="id" value="1"/>
         <property name="description" value="By Sea"/>
         <property name="type" value="sea"/>
     </bean>
 
-    <bean id="travelTicketAir" class="ua.burdyga._2_spring.bean._4_di._8_qualifier_annotation.TravelTicket">
+    <bean id="travelTicketAir" class="ua.burdyga._5_di._8_qualifier_annotation.TravelTicket">
         <property name="id" value="2"/>
         <property name="description" value="By Air"/>
         <property name="type" value="air"/>
     </bean>
 
     <!-- Spring JSR-250 Annotations -->
-    <bean id="jsrBean" class="ua.burdyga._2_spring.bean._4_di._9_jsr250_annotations.JsrBean" init-method="init"
+    <bean id="jsrBean" class="ua.burdyga._5_di._9_jsr250_annotations.JsrBean" init-method="init"
           destroy-method="destroy"/>
 
 </beans>

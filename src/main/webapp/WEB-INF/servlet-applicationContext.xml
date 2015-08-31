@@ -4,15 +4,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="itemBean" class="ua.burdyga._2_spring.bean._2_container.ItemBean">
+    <bean id="itemBean" class="ua.burdyga._3_container.ItemBean">
         <property name="name" value="new"/>
         <property name="price" value="0"/>
     </bean>
 
     <!-- A bean definition with initialization method -->
-    <bean id="fooWithInitMethod" class="ua.burdyga._2_spring.bean._3_bean_scopes.FooBean" init-method="myInitMethod"/>
+    <bean id="fooWithInitMethod" class="ua.burdyga._4_bean_scopes.FooBean" init-method="myInitMethod"/>
 
     <!-- A bean definition with destruction method -->
-    <bean id="fooWithDestroyMethod" class="ua.burdyga._2_spring.bean._3_bean_scopes.FooBean" destroy-method="myDestroyMethod"/>
+    <bean id="fooWithDestroyMethod" class="ua.burdyga._4_bean_scopes.FooBean" destroy-method="myDestroyMethod"/>
 
 </beans>

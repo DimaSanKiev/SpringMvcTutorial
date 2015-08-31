@@ -6,19 +6,20 @@
     <display-name>Spring MVC Web Application</display-name>
 
     <servlet>
-        <display-name>OrderServlet</display-name>
-        <servlet-name>OrderServlet</servlet-name>
-        <servlet-class>ua.burdyga.web.servlet.OrderServlet</servlet-class>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
-
     <servlet-mapping>
-        <servlet-name>OrderServlet</servlet-name>
-        <url-pattern>/OrderServlet</url-pattern>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
-
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>src/main/webapp/WEB-INF/servlet-applicationContext.xml</param-value>
+        <param-value>src/main/webapp/WEB-INF/dispatcher-servlet.xml</param-value>
     </context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
 
 </web-app>

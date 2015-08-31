@@ -2,7 +2,7 @@ package ua.burdyga.web.servlet;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
-import ua.burdyga._2_spring.bean._2_container.ItemBean;
+import ua.burdyga._3_container.ItemBean;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
