@@ -133,4 +133,23 @@
         <property name="name" value="Sakai"/>
     </bean>
 
+    <!-- Spring Beans Auto-Wiring -->
+    <bean id="homeAddress" class="ua.burdyga._2_spring.bean._4_di._5_auto_wiring.AddressBean">
+        <property name="streetName" value="123 Home Street"/>
+        <property name="state" value="FL"/>
+        <property name="city" value="Boca Raton"/>
+        <property name="zip" value="87655"/>
+    </bean>
+
+    <bean id="officeAddress" class="ua.burdyga._2_spring.bean._4_di._5_auto_wiring.AddressBean" primary="true">
+        <property name="streetName" value="321 Office Street"/>
+        <property name="state" value="CA"/>
+        <property name="city" value="Los Angeles"/>
+        <property name="zip" value="55555"/>
+    </bean>
+
+    <bean id="studentBean" class="ua.burdyga._2_spring.bean._4_di._5_auto_wiring.StudentBean" autowire="byType">
+        <property name="name" value="Estudent"/>
+    </bean>
+
 </beans>
