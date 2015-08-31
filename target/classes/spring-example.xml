@@ -8,11 +8,13 @@
         <property name="name" value="Dima"/>
     </bean>
 
-    <bean id="customParserBean" class="ua.burdyga._2_spring.bean._3_bean_scopes._1_singleton.CustomParserBean" scope="singleton">
+    <bean id="customParserBean" class="ua.burdyga._2_spring.bean._3_bean_scopes._1_singleton.CustomParserBean"
+          scope="singleton">
         <property name="message" value="message set in xml config for bean"/>
     </bean>
 
-    <bean id="uiWidgetBean" class="ua.burdyga._2_spring.bean._3_bean_scopes._2_prototype.UIWidgetBean" scope="prototype">
+    <bean id="uiWidgetBean" class="ua.burdyga._2_spring.bean._3_bean_scopes._2_prototype.UIWidgetBean"
+          scope="prototype">
         <property name="message" value="message set in xml config for bean"/>
     </bean>
 
@@ -29,7 +31,8 @@
 
     <bean id="hardDriveBean" class="ua.burdyga._2_spring.bean._4_di._1_constructor_di.HardDriveBean" scope="prototype"/>
 
-    <bean id="graphicsCardBean" class="ua.burdyga._2_spring.bean._4_di._1_constructor_di.GraphicsCardBean" scope="singleton"/>
+    <bean id="graphicsCardBean" class="ua.burdyga._2_spring.bean._4_di._1_constructor_di.GraphicsCardBean"
+          scope="singleton"/>
 
     <bean id="cpuBean" class="ua.burdyga._2_spring.bean._4_di._1_constructor_di.CpuBean" scope="singleton"/>
 
@@ -39,8 +42,8 @@
     </bean>
 
     <bean id="shoppingCartBean2" class="ua.burdyga._2_spring.bean._4_di._2_setter_di.ShoppingCartBean"
-        p:date="2015-01-01"
-        p:product-ref="productBean">
+          p:date="2015-01-01"
+          p:product-ref="productBean">
     </bean>
 
     <bean id="productBean" class="ua.burdyga._2_spring.bean._4_di._2_setter_di.ProductBean">
@@ -72,6 +75,62 @@
                 <property name="horsePower" value="10000"/>
             </bean>
         </property>
+    </bean>
+
+    <!-- Spring Injecting Collection -->
+    <bean id="collectionExample" class="ua.burdyga._2_spring.bean._4_di._4_collections.CollectionExample">
+        <property name="exampleList">
+            <list>
+                <value>Credit Card</value>
+                <value>Cash on Delivery</value>
+                <value>Check</value>
+                <value>Cash</value>
+            </list>
+        </property>
+
+        <property name="exampleSet">
+            <set>
+                <value>Acura</value>
+                <value>BMW</value>
+                <value>Cadillac</value>
+                <value>Dodge</value>
+            </set>
+        </property>
+
+        <property name="exampleMap">
+            <map>
+                <entry key="1" value="Gift Card"/>
+                <entry key="2" value="Buy 1 Get 1 Free"/>
+                <entry key="3" value="Sale"/>
+                <entry key="4" value="Cash Back"/>
+            </map>
+        </property>
+
+        <property name="exampleProp">
+            <props>
+                <prop key="one">Server Name</prop>
+                <prop key="two">User Name</prop>
+                <prop key="three">Password</prop>
+                <prop key="four">Secure Token</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="collectionExample2" class="ua.burdyga._2_spring.bean._4_di._4_collections.CollectionExample2">
+        <property name="usersList">
+            <list value-type="ua.burdyga._2_spring.bean._4_di.UserBean">
+                <ref bean="userBean"/>
+                <ref bean="userBean2"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="userBean" class="ua.burdyga._2_spring.bean._4_di.UserBean">
+        <property name="name" value="Bobby Flay"/>
+    </bean>
+
+    <bean id="userBean2" class="ua.burdyga._2_spring.bean._4_di.UserBean">
+        <property name="name" value="Sakai"/>
     </bean>
 
 </beans>
