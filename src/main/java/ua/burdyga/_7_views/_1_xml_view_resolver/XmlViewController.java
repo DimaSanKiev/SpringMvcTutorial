@@ -1,4 +1,4 @@
-package ua.burdyga._6_controllers;
+package ua.burdyga._7_views._1_xml_view_resolver;
 
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
