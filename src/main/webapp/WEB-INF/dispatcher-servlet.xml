@@ -15,11 +15,20 @@
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
 
     <bean class="ua.burdyga._6_controllers.UserController">
-        <property name="methodNameResolver"/>
-        <bean class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
-            <property name="prefix" value=""/>
-            <property name="suffix" value="User"/>
-        </bean>
+        <property name="methodNameResolver">
+            <bean class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+                <property name="prefix" value=""/>
+                <property name="suffix" value="User"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean class="ua.burdyga._6_controllers.XmlViewController"/>
+
+    <bean class="org.springframework.web.servlet.view.XmlViewResolver">
+        <property name="location">
+            <value>/WEB-INF/application-views-xml.xml</value>
+        </property>
     </bean>
 
 </beans>
