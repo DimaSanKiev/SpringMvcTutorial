@@ -66,4 +66,17 @@
         </property>
     </bean>
 
+    <!-- ParameterizableViewController -->
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/greetings">greetingsController</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean name="greetingsController" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+        <property name="viewName" value="GreetingsPage"/>
+    </bean>
+
 </beans>
