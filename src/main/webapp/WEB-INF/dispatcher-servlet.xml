@@ -29,12 +29,14 @@
         <property name="location">
             <value>/WEB-INF/application-views-xml.xml</value>
         </property>
+        <property name="order" value="0"/>
     </bean>
 
     <bean class="ua.burdyga._7_views._2_resource_bundle_view_resolver.ResourceBundleViewController"/>
 
     <bean class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
         <property name="basename" value="spring-views"/>
+        <property name="order" value="1"/>
     </bean>
 
 </beans>
