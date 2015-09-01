@@ -12,4 +12,14 @@
           p:prefix="/WEB-INF/jsp"
           p:suffix=".jsp"/>
 
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+
+    <bean class="ua.burdyga._6_controllers.UserController">
+        <property name="methodNameResolver"/>
+        <bean class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+            <property name="prefix" value=""/>
+            <property name="suffix" value="User"/>
+        </bean>
+    </bean>
+
 </beans>
