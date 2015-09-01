@@ -23,6 +23,7 @@
         </property>
     </bean>
 
+    <!-- XmlViewResolver -->
     <bean class="ua.burdyga._7_views._1_xml_view_resolver.XmlViewController"/>
 
     <bean class="org.springframework.web.servlet.view.XmlViewResolver">
@@ -32,11 +33,28 @@
         <property name="order" value="0"/>
     </bean>
 
+    <!-- ResourceBundleViewResolver -->
     <bean class="ua.burdyga._7_views._2_resource_bundle_view_resolver.ResourceBundleViewController"/>
 
     <bean class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
         <property name="basename" value="spring-views"/>
         <property name="order" value="1"/>
+    </bean>
+
+    <!-- PropertiesMethodNameResolver -->
+    <bean class="ua.burdyga._7_views._3_properties_method_name_resolver.PaymentController">
+        <property name="methodNameResolver">
+            <bean class="org.springframework.web.servlet.mvc.multiaction.MethodNameResolver">
+                <property name="mappings">
+                    <props>
+                        <prop key="/payment/captureCC">capture</prop>
+                        <prop key="/payment/setPayment">setPaymentMethod</prop>
+                        <prop key="/payment/saveCC">saveCC</prop>
+                        <prop key="/payment/process">process</prop>
+                    </props>
+                </property>
+            </bean>
+        </property>
     </bean>
 
 </beans>
