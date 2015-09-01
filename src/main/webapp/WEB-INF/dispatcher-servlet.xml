@@ -57,4 +57,13 @@
         </property>
     </bean>
 
+    <!-- ParameterMethodNameResolver -->
+    <bean class="ua.burdyga._7_views._4_parameter_method_name_resolver.EnrollmentController">
+        <property name="methodNameResolver">
+            <bean class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+                <property name="paramName" value="action"/>
+            </bean>
+        </property>
+    </bean>
+
 </beans>
