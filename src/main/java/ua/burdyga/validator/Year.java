@@ -8,7 +8,7 @@ import java.lang.annotation.*;
 @Constraint(validatedBy = YearConstraintValidator.class)
 @Target({ElementType.METHOD, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Yeat {
+public @interface Year {
 
     int value();
 
