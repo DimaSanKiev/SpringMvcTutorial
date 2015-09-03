@@ -1,11 +1,11 @@
-package ua.burdyga.app.controller;
+package ua.burdyga._8_forms.app.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import ua.burdyga.app.model.Subscriber;
+import ua.burdyga._8_forms.app.model.Subscriber;
 
 import javax.validation.Valid;
 

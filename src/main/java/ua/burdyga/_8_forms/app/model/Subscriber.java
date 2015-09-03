@@ -1,10 +1,10 @@
-package ua.burdyga.app.model;
+package ua.burdyga._8_forms.app.model;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
-import ua.burdyga.validator.Phone;
-import ua.burdyga.validator.Year;
+import ua.burdyga._8_forms.validator.Phone;
+import ua.burdyga._8_forms.validator.Year;
 
 import javax.validation.constraints.*;
 import java.util.Date;

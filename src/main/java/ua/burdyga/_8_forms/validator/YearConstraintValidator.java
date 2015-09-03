@@ -1,4 +1,4 @@
-package ua.burdyga.validator;
+package ua.burdyga._8_forms.validator;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

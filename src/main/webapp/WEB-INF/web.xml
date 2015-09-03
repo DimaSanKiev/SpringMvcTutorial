@@ -31,7 +31,7 @@
         </init-param>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>ua.burdyga.config</param-value>
+            <param-value>ua.burdyga._8_forms.config</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
